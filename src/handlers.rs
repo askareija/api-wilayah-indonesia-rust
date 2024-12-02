@@ -2,7 +2,7 @@ use actix_web::{web, HttpResponse, Responder};
 use serde_json::json;
 
 use crate::db::Database;
-use crate::models::{District, FullAdminData, Province, Regency, Village};
+use crate::models::{District, Province, Regency, Village};
 
 pub async fn get_all_provinces(db: web::Data<Database>) -> impl Responder {
     match db.get_all_provinces() {
