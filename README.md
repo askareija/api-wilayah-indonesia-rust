@@ -1,6 +1,6 @@
-# REST API Wilayah Administratif Indonesia
+# REST API Wilayah Administrasi Indonesia
 
-Ini adalah sebuah REST API yang menyediakan data wilayah administratif Indonesia. Database SQLite ini sudah terisi dengan data wilayah Indonesia yang bersumber dari github [guzfirdaus/Wilayah-Administrasi-Indonesia](https://github.com/guzfirdaus/Wilayah-Administrasi-Indonesia).
+Ini adalah sebuah REST API yang menyediakan data wilayah administrasi Indonesia. Database SQLite ini sudah terisi dengan data wilayah Indonesia yang bersumber dari github [guzfirdaus/Wilayah-Administrasi-Indonesia](https://github.com/guzfirdaus/Wilayah-Administrasi-Indonesia).
 
 ## Teknologi yang digunakan
 1. [Rust](https://www.rust-lang.org/) (Bahasa pemrograman)
