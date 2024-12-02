@@ -23,7 +23,10 @@ pub fn configure_regency_routes(cfg: &mut web::ServiceConfig) {
                 "/{city_id}/districts",
                 web::get().to(handlers::get_districts_by_regency),
             )
-            .route("/{id}", web::get().to(handlers::get_one_regency)),
+            .route("", web::post().to(handlers::create_regency))
+            .route("/{id}", web::get().to(handlers::get_one_regency))
+            .route("/{id}", web::put().to(handlers::update_regency))
+            .route("/{id}", web::delete().to(handlers::delete_regency)),
     );
 }
 
@@ -34,7 +37,10 @@ pub fn configure_district_routes(cfg: &mut web::ServiceConfig) {
                 "/{region_id}/villages",
                 web::get().to(handlers::get_villages_by_district),
             )
-            .route("/{id}", web::get().to(handlers::get_one_district)),
+            .route("", web::post().to(handlers::create_district))
+            .route("/{id}", web::get().to(handlers::get_one_district))
+            .route("/{id}", web::put().to(handlers::update_district))
+            .route("/{id}", web::delete().to(handlers::delete_district)),
     );
 }
 
@@ -45,6 +51,9 @@ pub fn configure_village_routes(cfg: &mut web::ServiceConfig) {
                 "/{village_id}/details",
                 web::get().to(handlers::get_full_admin_data),
             )
-            .route("/{id}", web::get().to(handlers::get_one_village)),
+            .route("", web::post().to(handlers::create_village))
+            .route("/{id}", web::get().to(handlers::get_one_village))
+            .route("/{id}", web::put().to(handlers::update_village))
+            .route("/{id}", web::delete().to(handlers::delete_village)),
     );
 }
