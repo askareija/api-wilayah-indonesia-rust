@@ -1,0 +1,30 @@
+{
+	"name": "Rust Wilayah Service",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"mounts": [
+		{
+			"source": "/etc/localtime",
+			"target": "/etc/localtime",
+			"type": "bind"
+		},
+		{
+			"source": "/etc/timezone",
+			"target": "/etc/timezone",
+			"type": "bind"
+		}
+	],
+	"containerEnv": {
+		"TZ": "Asia/Jakarta"
+	},
+	// NOTE: Set network, memory limit, cpus on running container
+	"runArgs": [
+		"--name=rust-wilayah-service",
+		"--cpus=8",
+		"--memory=8g",
+		"--network=proxynet",
+		"--add-host=host.docker.internal:host-gateway",
+		"--hostname=wilayah-service"
+	]
+}

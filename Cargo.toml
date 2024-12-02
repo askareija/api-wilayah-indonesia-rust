@@ -1,0 +1,20 @@
+[package]
+name = "wilayah-service"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4" # Framework HTTP
+actix-rt = "2" # Runtime HTTP
+rusqlite = { version = "0.32.0", features = ["bundled"] } # Driver SQLite
+serde = { version = "1", features = ["derive"]} # Serialisasi/Deserialisasi
+serde_json = "1"
+thiserror = "1" # Penanganan error
+dotenv = "0.15.0"
+log = "0.4"
+env_logger = "0.10"
+tonic = "0.8" # Framework gRPC
+prost = "0.11" # Library protobuf untuk gRPC
+
+[build-dependencies]
+tonic-build = "0.8"
