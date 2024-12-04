@@ -59,3 +59,13 @@ services:
 ```
 
 Aplikasi microservice ini bisa dijalankan sendiri, namun akan lebih jika dipasangkan dengan aplikasi lain dan menggunakan API gateway seperti [Krakend](https://www.krakend.io/) atau [Apache APISIX](https://apisix.apache.org/).
+
+#### Contoh Arsitektur
+```mermaid
+flowchart TD
+    A[Browser] -->|Akses ke aplikasi| B[Server Proxy / NGINX]
+    B -->|/| C[Frontend]
+    B -->|/api| D[API Gateway]
+    D -->|/api/*| E[Main Backend]
+    D -->|/api/wilayah/*| F[Wilayah Service]
+```
