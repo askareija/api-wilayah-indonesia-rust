@@ -26,6 +26,17 @@ Ini adalah sebuah REST API yang menyediakan data wilayah administrasi Indonesia.
 	"village_name": "Bojongsoang"
 }
 ```
+
+## Alur Teknis
+Dari main, lalu ke routes untuk mendefinisikan path URL, lalu dari route tersebut ke handler, anggap saja handler ini adalah controller, lalu dari handler ke db, anggap db ini adalah repository, karena dia melakukan interaksi langsung dengan tier database.
+
+```mermaid
+flowchart LR
+    A[Main] --> B[Routes]
+    B --> C[Handlers]
+    C --> D[DB]
+```
+
 ## Penggunaan
 Untuk menggunakan REST API ini, Anda perlu menggunakan [Postman](https://www.postman.com/) atau [Insomnia](https://insomnia.rest/) untuk mengakses endpoint tersebut.
 
