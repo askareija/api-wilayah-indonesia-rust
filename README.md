@@ -34,7 +34,7 @@ Untuk menggunakan REST API ini, Anda perlu menggunakan [Postman](https://www.pos
 2. Klik `Import`
 3. Pilih file `insomnia_wilayah_indonesia.json` lalu klik `Scan`, lalu klik `Import`
 
-### Docker
+## Docker
 
 #### Build image
 ```bash
@@ -58,7 +58,9 @@ services:
       - ./data:/data
 ```
 
-Aplikasi microservice ini bisa dijalankan sendiri, namun akan lebih jika dipasangkan dengan aplikasi lain dan menggunakan API gateway seperti [Krakend](https://www.krakend.io/) atau [Apache APISIX](https://apisix.apache.org/).
+## Arsitektur
+
+Aplikasi microservice ini bisa dijalankan sendiri, namun akan lebih bagus jika disandingkan dengan aplikasi lain menggunakan API gateway seperti [Krakend](https://www.krakend.io/) atau [Apache APISIX](https://apisix.apache.org/).
 
 #### Contoh Arsitektur
 ```mermaid
